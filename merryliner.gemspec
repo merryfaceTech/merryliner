@@ -5,19 +5,19 @@ require_relative "lib/merryliner/version"
 Gem::Specification.new do |spec|
   spec.name = "merryliner"
   spec.version = Merryliner::VERSION
-  spec.authors = ["Tarik Merrlees"]
+  spec.authors = ["Tarik Merrylees"]
   spec.email = ["tarik.merrylees@madetech.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "This is an exercise where one must create a linewrapper gem"
+  spec.description = "This is an exercise where one must create a linewrapper gem. It is part of a MT Academy exercise. Soon this gem will be all up in the business of wrapping texts."
+  spec.homepage = "https://github.com/merryfaceTech/merryliner.git"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/merryfaceTech/merryliner"
+  spec.metadata["changelog_uri"] = "https://github.com/merryfaceTech/merryliner/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
