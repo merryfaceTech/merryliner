@@ -6,22 +6,22 @@ RSpec.describe Merryliner do
   end
 
   it "Merryliner returns a string of \'something\'" do
-    output = Merryliner.execute("something")
+    output = Merryliner.execute("something", 10)
     expect(output).to eq("something")
   end
 
   it "Merryliner returns a string of \'something else\'" do
-    output = Merryliner.execute("something else")
+    output = Merryliner.execute("something else", 10)
     expect(output).to eq("something\nelse")
   end
 
   it "Merryliner returns a string of \'something else \\n here\' because of a 10 character limit" do
-    output = Merryliner.execute("something else here")
+    output = Merryliner.execute("something else here", 10)
     expect(output).to eq("something\nelse here")
   end
 
-  it "Merryliner returns a string of \'something else \\n here\' because of a 15 character limit" do
-    output = Merryliner.execute("something else here")
-    expect(output).to eq("somethingelse\n here")
+  it "Merryliner returns a string of \'something else\\nhere\' because of a 15 character limit" do
+    output = Merryliner.execute("something else here", 15)
+    expect(output).to eq("something else\nhere")
   end
 end

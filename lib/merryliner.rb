@@ -5,14 +5,14 @@ require_relative "merryliner/version"
 module Merryliner
   class Error < StandardError; end
 
-  def self.execute(string)
-    if string.length > 10
-      if string[9] == " "
-        string[9] = "\n"
-        part1, part2 = string.slice!(0...9), string
+  def self.execute(string, column_length)
+    if string.length > column_length
+      if string[column_length - 1] == " "
+        string[column_length -1] = "\n"
+        part1, part2 = string.slice!(0...column_length -1), string
         part1 + part2
       else
-        part1, part2 = string.slice!(0...10), string
+        part1, part2 = string.slice!(0...column_length), string
         part1 + "\n" + part2
       end
     else
