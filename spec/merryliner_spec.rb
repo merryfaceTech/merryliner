@@ -24,4 +24,9 @@ RSpec.describe Merryliner do
     output = Merryliner.execute("something else here", 15)
     expect(output).to eq("something else\nhere")
   end
+
+  it "Merryliner returns a string where line breaks occur at the limit OR at the end of the word surpassing the limit" do
+    output = Merryliner.execute("something else here", 12)
+    expect(output).to eq("something else\nhere")
+  end
 end
