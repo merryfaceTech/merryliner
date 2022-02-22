@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 require_relative "merryliner/version"
 
@@ -6,9 +6,8 @@ module Merryliner
   class Error < StandardError; end
 
   def self.execute(string)
-    input = string
-    if input.length
-      part1, part2 = input.slice!(0...10)
+    if string.length > 10
+      part1, part2 = string.slice!(0...10), string
       part1 + "\n" + part2
     else
       string
