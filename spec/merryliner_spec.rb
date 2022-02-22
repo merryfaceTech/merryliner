@@ -9,4 +9,9 @@ RSpec.describe Merryliner do
     output = Merryliner.execute
     expect(output).to eq("something")
   end
+
+  it "Merryliner returns a string of \'something else\'" do
+    output = Merryliner.execute("something else")
+    expect(output).to eq("something else")
+  end
 end
