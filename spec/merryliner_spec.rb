@@ -19,4 +19,9 @@ RSpec.describe Merryliner do
     output = Merryliner.execute("something else here")
     expect(output).to eq("something\nelse here")
   end
+
+  it "Merryliner returns a string of \'something else \\n here\' because of a 15 character limit" do
+    output = Merryliner.execute("something else here")
+    expect(output).to eq("somethingelse\n here")
+  end
 end
