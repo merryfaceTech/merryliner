@@ -3,9 +3,9 @@
 require_relative "merryliner/version"
 
 module Merryliner
-  class Merryliner
-    
-  end
   class Error < StandardError; end
-  
+
+  def self.execute
+    'something'
+  end
 end

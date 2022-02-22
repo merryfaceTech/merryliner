@@ -6,7 +6,7 @@ RSpec.describe Merryliner do
   end
 
   it "Merryliner returns a string of \'something\'" do
-    output = Merryliner::execute
+    output = Merryliner.execute
     expect(output).to eq("something")
   end
 end
