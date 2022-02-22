@@ -12,11 +12,11 @@ RSpec.describe Merryliner do
 
   it "Merryliner returns a string of \'something else\'" do
     output = Merryliner.execute("something else")
-    expect(output).to eq("something \nelse")
+    expect(output).to eq("something\nelse")
   end
 
   it "Merryliner returns a string of \'something else \\n here\' because of a 10 character limit" do
     output = Merryliner.execute("something else here")
-    expect(output).to eq("something \nelse here")
+    expect(output).to eq("something\nelse here")
   end
 end
