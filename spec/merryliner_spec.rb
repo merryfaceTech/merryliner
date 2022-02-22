@@ -5,7 +5,8 @@ RSpec.describe Merryliner do
     expect(Merryliner::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "Merryliner returns a string of \'something\'" do
+    output = Merryliner::execute
+    expect(output).to eq("something")
   end
 end
